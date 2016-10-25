@@ -1,0 +1,13 @@
+<div>
+  <h3>Results table</h3>
+  <table>
+    <tr>
+      <th>Value</th>
+      <th>Date</th>
+    </tr>
+    <tr ng-repeat="x in resultsHistory ">
+      <td>{{ x.value }}</td>
+      <td>{{ x.date | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+    </tr>
+  </table>
+</div>

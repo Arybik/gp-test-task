@@ -1,0 +1,25 @@
+<div class="gp-calculator"  layout="column" ng-cloak class="md-inline-form" >
+  <div class="gpc-operand-input" layout-gt-sm="row" layout-padding>
+    <md-input-container>
+      <label>First operand: </label><input type="number" ng-model="operands[0]">
+    </md-input-container>
+    <md-input-container>
+      <label>Second operand: </label><input type="number" ng-model="operands[1]">
+    </md-input-container>
+
+    <md-input-container>
+      <label>Opetaror</label>
+      <md-select ng-model="operator">
+        <md-option ng-repeat="value in availableOperators" ng-value="value">
+          {{value}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+    <div class="gpc-operator-input">
+      <md-button class="md-raised md-primary" ng-click="calculate()">Calculate</md-button>
+    </div>
+  </div>
+  <div class="gpc-error-message" ng-if="errorMessage">{{errorMessage}}</div>
+  <md-divider ></md-divider>
+</div>
